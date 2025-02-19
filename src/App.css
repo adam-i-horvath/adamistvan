@@ -10,7 +10,7 @@
   
   /* Style for the name */
   .name {
-    font-size: 5rem;
+    font-size: 8vw;
     color: white;
     text-align: center;
     margin: 0;
@@ -22,8 +22,3 @@
     font-weight: 800;
   }
   
-  /* Style for the emoji */
-  .emoji {
-    font-size: 8rem; /* Set emoji size */
-    margin-top: 30px; /* Add 30px margin top */
-  }

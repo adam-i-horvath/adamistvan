@@ -9,7 +9,6 @@ function App() {
           Horváth<span className="bold">&nbsp;Ádám&nbsp;István</span>
         </div>
       </div>
-      <div className="emoji">👋</div>
     </div>
   );
 }
