@@ -4,7 +4,7 @@
     flex-direction: column; /* Stack children vertically */
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 90vh; /* Full viewport height */
     background-color: #231F20; /* Background color */
   }
   
