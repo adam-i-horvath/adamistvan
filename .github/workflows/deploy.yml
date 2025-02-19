@@ -1,0 +1,30 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Updated to v4 which uses Node.js 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Deploy to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.1 # Updated to v4.3.1 which uses Node.js 20
+        with:
+          server: ${{ secrets.SERVER }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          local-dir: ${{ secrets.LOCAL_DIR }} # Ensure this ends with a slash
+          server-dir: ${{ secrets.SERVER_DIR }} # Specify the full remote directory path
+          port: ${{ secrets.PORT }} # Optional, but added for clarity
