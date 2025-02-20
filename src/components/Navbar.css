@@ -1,0 +1,87 @@
+.navbar {
+  border: 1px solid #161616;
+  border-radius: 15px;
+  margin: 5px;
+  width: 100%;
+}
+
+.navbar.dark {
+  background-color: #212121;
+}
+
+.navbar.light {
+  background-color: #f5f5f5;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+}
+
+.left .MuiIconButton-root, .right .MuiIconButton-root {
+  color: #9A9A9A;
+  border-radius: 50%;
+}
+
+.left .MuiIconButton-root:hover, .right .MuiIconButton-root:hover {
+  background-color: #333333;
+}
+
+.navbar.light .left .MuiIconButton-root:hover, .navbar.light .right .MuiIconButton-root:hover {
+  background-color: #d0d0d0;
+}
+
+.left .MuiIconButton-root:active, .right .MuiIconButton-root:active {
+  color: #FFFFFF;
+}
+
+.right .MuiButton-root {
+  background-color: #333333;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  margin-left: 5px;
+}
+
+.right .MuiButton-root:hover {
+  background-color: #444444;
+}
+
+.navbar.light .MuiIconButton-root, .navbar.light .MuiButton-root {
+  color: #444444;
+}
+
+.navbar.light .MuiButton-root {
+  background-color: #e0e0e0;
+}
+
+.navbar.light .MuiButton-root:hover {
+  background-color: #d0d0d0;
+}
+
+.active .MuiSvgIcon-root {
+  color: #FFFFFF;
+}
+
+.active .MuiIconButton-root {
+  background-color: #444444;
+}
+
+.navbar.light .active .MuiIconButton-root {
+  background-color: #121212;
+}
+
+.navbar.light .active .MuiSvgIcon-root {
+  color: #121212;
+}
+
+@media (max-width: 600px) {
+  .right .MuiButton-root .MuiButton-label {
+    display: none;
+  }
+}
+
