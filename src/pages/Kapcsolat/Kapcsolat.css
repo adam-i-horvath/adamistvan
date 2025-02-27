@@ -1,35 +1,138 @@
 .kapcsolat {
-    padding: 20px;
-    margin-top: 50px;
-    margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.left-column {
+  flex: 0 0 60%;
+  padding: 20px;
+  background-color: var(--navbar-background-color);
+  border-radius: 10px;
+}
+
+.right-column {
+  flex: 1 1 40%;
+  padding: 20px;
+  background-color: var(--navbar-background-color);
+  border-radius: 10px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-media div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+.form-group-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  background-color: var(--navbar-background-color);
+}
+
+textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  height: 150px;
+  resize: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background-color: var(--navbar-background-color);
+}
+
+
+input:focus,
+textarea:focus {
+  border: 1px solid #ccc; /* Ensure no border change on focus */
+}
+
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  width: 150px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.send-button,
+.cancel-button {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 20px !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.send-button {
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  transition: background-color 0.3s ease; /* Add animation */
+  margin-bottom: 50px;
+}
+
+.send-button:hover {
+  background-color: var(--tertiary-color);
+}
+
+.cancel-button {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add animation */
+}
+
+.cancel-button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Responsive styles for mobile view */
+@media (max-width: 1200px) {
+  .kapcsolat, .form-group-row {
+    flex-direction: column;
   }
-  
-  h1 {
-    font-family: 'Noe Display', Georgia, Times, serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
+
+  .left-column,
+  .right-column {
+    flex: 1 1 100%;
   }
-  
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-  
-  a {
-    color: var(--primary-color);
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+}
