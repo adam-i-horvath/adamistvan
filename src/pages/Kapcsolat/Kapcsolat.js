@@ -20,7 +20,7 @@ function Kapcsolat() {
   });
 
   const [timer, setTimer] = useState(null);
-  const [countdown, setCountdown] = useState(5);
+  const [, setCountdown] = useState(5);
   const [cancelled, setCancelled] = useState(false);
 
   const handleChange = (e) => {
