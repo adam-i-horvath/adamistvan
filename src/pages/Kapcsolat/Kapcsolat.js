@@ -5,21 +5,8 @@ import SendIcon from '@mui/icons-material/Send';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 function Kapcsolat() {
-  const fetchData = async () => {
-    const response = await fetch('https://adamistvan.hu/api-proxy.php');
-    const data = await response.json();
-    console.log(data);
-  };
-  fetchData();
-
-  const recaptchaRef = React.createRef();
-
-  function onChange(value) {
-    console.log('Captcha value:', value);
-  }
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,9 +32,6 @@ function Kapcsolat() {
   };
 
   const handleSubmit = (e) => {
-    const recaptchaValue = recaptchaRef.current.getValue();
-    this.props.onSubmit(recaptchaValue);
-
     e.preventDefault();
     setCancelled(false);
     setCountdown(5);
@@ -207,11 +191,6 @@ function Kapcsolat() {
               </Button>
             )}
           </div>
-          <ReCAPTCHA
-            ref={recaptchaRef}
-            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-            onChange={onChange}
-          />
         </form>
       </div>
       <Snackbar open={alert.open} autoHideDuration={6000} onClose={handleClose}>
