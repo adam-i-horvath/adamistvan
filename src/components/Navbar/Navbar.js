@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
@@ -33,24 +32,23 @@ function Navbar() {
 
   return (
     <div className="navbar__container">
-      <div className="img">
-        <img src={ImageAdam} alt="Adam" />
-        <VerifiedIcon className="verified-icon" />
-      </div>
-      <nav className="navbar">
-        <NavLink
-          to="/"
-          className="nav-link"
-          activeClassName="active"
-          onClick={() => setActiveLabel('Kezdőlap')}
-        >
-          <div className="icon-container">
-            <HomeIcon />
+      <NavLink
+        to="/"
+        className="nav-link-avatar"
+        activeClassName="active"
+        onClick={() => setActiveLabel('Kezdőlap')}
+      >
+        <div className="icon-container">
+          <div className="img">
+            <img src={ImageAdam} alt="Adam" />
+            <VerifiedIcon className="verified-icon" />
           </div>
-          <span className={activeLabel === 'Kezdőlap' ? 'show' : 'hide'}>
-            Kezdőlap
-          </span>
-        </NavLink>
+        </div>
+        <span className={activeLabel === 'Kezdőlap' ? 'show' : 'hide'}>
+          Üdv! 👋
+        </span>
+      </NavLink>
+      <nav className="navbar">
         <NavLink
           to="/rolam"
           className="nav-link"

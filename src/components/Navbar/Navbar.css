@@ -2,10 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-transform: uppercase;
     font-size: 14px;
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   
   .navbar {
@@ -31,6 +33,16 @@
     border-radius: 50px;
     transition: background-color 0.5s ease;
   }
+
+  .nav-link-avatar {
+    color: var(--navbar-text-color);
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-radius: 50px;
+    transition: background-color 0.5s ease;
+  }
   
   .nav-link .icon-container {
     display: flex;
@@ -43,12 +55,22 @@
   .nav-link.active {
     background-color: var(--navbar-active-background-color);
   }
+
+  .nav-link-avatar span {
+    background-color: var(--navbar-active-background-color);
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px 15px 15px 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-transform: capitalize;
+  }
   
   .nav-link.active .icon-container svg {
     fill: var(--primary-color); /* Change icon color to blue when active */
   }
   
-  .nav-link span {
+  .nav-link span, .nav-link-avatar span {
     /*margin: 5px;*/
     transition: opacity 0.5s ease, width 0.5s ease;
     white-space: nowrap;
@@ -56,14 +78,19 @@
     overflow: hidden;
   }
   
-  .nav-link span.hide {
+  .nav-link span.hide, .nav-link-avatar span.hide {
     opacity: 0;
     width: 0;
   }
   
-  .nav-link span.show {
+  .nav-link span.show{
     opacity: 1;
     width: 85px;
+  }
+
+  .nav-link-avatar span.show {
+    opacity: 1;
+    width: 65px;
   }
   
   .nav-link:hover {
@@ -80,7 +107,6 @@
     width: 62.5px;
     height: 62.5px;
     border-radius: 50%;
-    margin: 5px;
     display: block;
   }
 
