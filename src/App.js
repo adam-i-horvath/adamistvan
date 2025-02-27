@@ -1,34 +1,30 @@
-import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Fun from './components/Fun';
+import Navbar from './components/Navbar/Navbar';
+import ThemeSwitcher from './components/ThemeSwitcher/ThemeSwitcher';
+import Kezdolap from './pages/Kezdolap/Kezdolap';
+import Rolam from './pages/Rolam/Rolam';
+import Projektek from './pages/Projektek/Projektek';
+import Kapcsolat from './pages/Kapcsolat/Kapcsolat';
 import './App.css';
+import Footer from './components/Footer/Footer';
 
-const App = () => {
-  const [darkMode, setDarkMode] = useState(true);
-
-  const handleThemeChange = () => {
-    setDarkMode(!darkMode);
-  };
-
+function App() {
   return (
-    <div className={`App ${darkMode ? 'dark' : 'light'}`}>
-      <div className="container">
-        <Navbar darkMode={darkMode} handleThemeChange={handleThemeChange} />
+    <div className="app__container">
+      <div className="adam">
+        <Navbar />
         <Routes>
-          <Route exact path="/" element={<Home darkMode={darkMode} />} />
-          <Route path="/about" element={<About darkMode={darkMode} />} />
-          <Route path="/projects" element={<Projects darkMode={darkMode} />} />
-          <Route path="/fun" element={<Fun darkMode={darkMode} />} />
+          <Route path="/" element={<Kezdolap />} />
+          <Route path="/rolam" element={<Rolam />} />
+          <Route path="/projektek" element={<Projektek />} />
+          <Route path="/kapcsolat" element={<Kapcsolat />} />
         </Routes>
-        <Footer darkMode={darkMode} />
       </div>
+      <Footer />
+      <ThemeSwitcher />
     </div>
   );
-};
+}
 
 export default App;

@@ -1,0 +1,35 @@
+.kapcsolat {
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  
+  h1 {
+    font-family: 'Noe Display', Georgia, Times, serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }

@@ -1,0 +1,16 @@
+.theme-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--navbar-background-color);
+    color: var(--navbar-text-color);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-switcher:hover {
+    background-color: var(--navbar-hover-background-color);
+  }
