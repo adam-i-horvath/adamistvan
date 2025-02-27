@@ -59,7 +59,7 @@ function Navbar() {
             <AccountCircleIcon />
           </div>
           <span className={activeLabel === 'Rólam' ? 'show' : 'hide'}>
-            Rólam
+            Ki vagyok?
           </span>
         </NavLink>
         <NavLink

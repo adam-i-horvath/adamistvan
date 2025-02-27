@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__content">
-        <p>&copy; {year} adamistvan.hu</p>
+        <p>&copy; {year} adamistvan.hu | Horváth Ádám István</p>
         <p>Minden jog fenntartva.</p>
       </div>
     </footer>

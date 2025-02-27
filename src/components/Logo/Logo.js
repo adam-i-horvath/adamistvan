@@ -4,8 +4,8 @@ import './Logo.css';
 const Logo = () => {
   return (
     <div className="logo">
-      <div className="logo__firstname">Adam</div>
-      <div className="logo__lastname">Horvath</div>
+      <div className="logo__firstname">adam</div>
+      <div className="logo__middlename">istvan</div>
     </div>
   );
 };

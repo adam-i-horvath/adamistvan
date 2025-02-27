@@ -4,8 +4,8 @@ import './Kezdolap.css';
 function Kezdolap() {
   return (
     <div className="home">
-      <h2>Hello, a nevem Ádám.</h2>
-      <h1>Weboldalakat készítek.</h1>
+      <h1>Hello, a nevem Ádám.</h1>
+      <h2>Weboldalakat készítek.</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
         vestibulum erat. Proin euismod, nisl eget consectetur sagittis, nisl

@@ -8,6 +8,7 @@ import Projektek from './pages/Projektek/Projektek';
 import Kapcsolat from './pages/Kapcsolat/Kapcsolat';
 import './App.css';
 import Footer from './components/Footer/Footer';
+import Logo from './components/Logo/Logo';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/kapcsolat" element={<Kapcsolat />} />
         </Routes>
       </div>
+      <Logo />
       <Footer />
       <ThemeSwitcher />
     </div>

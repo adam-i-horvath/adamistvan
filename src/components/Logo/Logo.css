@@ -1,12 +1,17 @@
 .logo {
-    font-family: 'Blox', sans-serif;
+  font-family: 'Noe Display', Georgia, Times, serif;
     font-size: 3rem;
     font-style: italic;
     line-height: 0.5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    color: #333;
+    color: var(--navbar-active-background-color);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
-  .logo__firstname, .logo__lastname {
-    text-align: center;
+  .logo__firstname, .logo__middlename {
+    text-align: left;
+    width: 135px;
   }
