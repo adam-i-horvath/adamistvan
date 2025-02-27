@@ -95,16 +95,6 @@ function Kapcsolat() {
     }
   };
 
-  const handleCancel = () => {
-    clearInterval(timer);
-    setCancelled(true);
-    setAlert({
-      open: true,
-      message: 'Az üzenet küldése megszakítva.',
-      severity: 'warning',
-    });
-  };
-
   const handleClose = () => {
     setAlert({ ...alert, open: false });
   };
@@ -181,15 +171,6 @@ function Kapcsolat() {
             >
               Küldés
             </Button>
-            {timer && (
-              <Button
-                variant="outlined"
-                onClick={handleCancel}
-                className="cancel-button"
-              >
-                Mégse ({countdown})
-              </Button>
-            )}
           </div>
         </form>
       </div>

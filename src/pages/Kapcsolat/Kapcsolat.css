@@ -59,6 +59,7 @@ input {
   outline: none;
   font-size: 16px;
   background-color: var(--navbar-background-color);
+  color: var(--text-color)
 }
 
 textarea {
@@ -72,6 +73,7 @@ textarea {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   background-color: var(--navbar-background-color);
+  color: var(--text-color)
 }
 
 
