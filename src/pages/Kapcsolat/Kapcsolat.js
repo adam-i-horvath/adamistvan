@@ -8,6 +8,13 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 function Kapcsolat() {
+  const fetchData = async () => {
+    const response = await fetch('https://adamistvan/api-proxy.php');
+    const data = await response.json();
+    console.log(data);
+  };
+  fetchData();
+
   const recaptchaRef = React.createRef();
 
   function onChange(value) {
