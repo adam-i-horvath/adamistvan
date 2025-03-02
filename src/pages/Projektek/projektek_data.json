@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "title": "Lorem Ipsum",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac vestibulum erat. Proin euismod, nisl eget consectetur sagittis, nisl nunc consectetur nisi, euismod consectetur nisl nunc euismod nisi.",
+      "image": "sample.jpg"
+    },
+    {
+      "title": "Dolor",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac vestibulum erat. Proin euismod, nisl eget consectetur sagittis, nisl nunc consectetur nisi, euismod consectetur nisl nunc euismod nisi.",
+      "image": "sample.jpg"
+    },
+    {
+      "title": "Sit Ames",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac vestibulum erat. Proin euismod, nisl eget consectetur sagittis, nisl nunc consectetur nisi, euismod consectetur nisl nunc euismod nisi.",
+      "image": "sample.jpg"
+    }
+  ]
+}

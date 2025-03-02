@@ -1,0 +1,20 @@
+.kartya__container {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    box-shadow: none !important;
+    border: none !important;
+    background-color: red !important;
+    margin: 15px 0px !important;
+    border-radius: 10px !important;
+
+  }
+  
+  .kartya__main {
+    background-color: var(--navbar-background-color);
+    padding: 15px !important;
+  }
+  
+  .kartya__title {
+    margin: 0px;
+    text-transform: uppercase;
+  }
