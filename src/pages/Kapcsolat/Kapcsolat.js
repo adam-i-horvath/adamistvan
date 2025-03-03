@@ -155,11 +155,22 @@ function Kapcsolat() {
             ></textarea>
           </div>
           <div className="recaptcha-container">
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              sitekey={process.env.REACT_APP_RECAPTCHA}
-              onChange={handleCaptchaChange}
-            />
+            <div
+              className="captcha"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '10px 10px 30px 10px',
+              }}
+            >
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={process.env.REACT_APP_RECAPTCHA}
+                onChange={handleCaptchaChange}
+                theme="dark"
+              />
+            </div>
           </div>
           <div className="button-group">
             <Button
