@@ -123,6 +123,7 @@ function Kapcsolat() {
       </div>
       <div className="right-column">
         <h2>Írj üzenetet</h2>
+        <p>{process.env.REACT_APP_TEST}</p>
         <p>
           Kérem, töltse ki az alábbi kapcsolatfelvételi űrlapot, hogy
           kapcsolatba lépjen velem.
