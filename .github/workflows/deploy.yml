@@ -15,8 +15,9 @@ jobs:
 
       - name: Create .env file
         run: echo "REACT_APP_TEST=${{ secrets.REACT_APP_TEST }}" > .env
+      
       - name: Contact security
-        run: echo "REACT_APP_TEST=${{ secrets.REACT_APP_RECAPTCHA }}" > .env
+        run: echo "REACT_APP_RECAPTCHA=${{ secrets.REACT_APP_RECAPTCHA }}" > .env
 
       - name: Install dependencies
         run: npm install
