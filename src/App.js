@@ -9,23 +9,28 @@ import Kapcsolat from './pages/Kapcsolat/Kapcsolat';
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Logo from './components/Logo/Logo';
+import { ThemeProvider } from './components/ThemeContext/ThemeContext';
+import Cookie from './pages/Cookie/Cookie';
 
 function App() {
   return (
-    <div className="app__container">
-      <div className="adam">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Kezdolap />} />
-          <Route path="/rolam" element={<Rolam />} />
-          <Route path="/projektek" element={<Projektek />} />
-          <Route path="/kapcsolat" element={<Kapcsolat />} />
-        </Routes>
+    <ThemeProvider>
+      <div className="app__container">
+        <div className="adam">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Kezdolap />} />
+            <Route path="/rolam" element={<Rolam />} />
+            <Route path="/projektek" element={<Projektek />} />
+            <Route path="/kapcsolat" element={<Kapcsolat />} />
+            <Route path="/cookie" element={<Cookie />} />
+          </Routes>
+        </div>
+        <Logo />
+        <Footer />
+        <ThemeSwitcher />
       </div>
-      <Logo />
-      <Footer />
-      <ThemeSwitcher />
-    </div>
+    </ThemeProvider>
   );
 }
 

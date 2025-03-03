@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
+import { ThemeContext } from '../../components/ThemeContext/ThemeContext';
 import './Kapcsolat.css';
 import { Alert, Snackbar, Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
@@ -8,6 +9,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 function Kapcsolat() {
+  const { theme } = useContext(ThemeContext);
   const recaptchaRef = useRef(null);
 
   const [formData, setFormData] = useState({
@@ -92,7 +94,7 @@ function Kapcsolat() {
   };
 
   return (
-    <div className="kapcsolat">
+    <div className={`kapcsolat ${theme}`}>
       <div className="left-column">
         <h1>Kapcsolat</h1>
         <p>
@@ -155,20 +157,12 @@ function Kapcsolat() {
             ></textarea>
           </div>
           <div className="recaptcha-container">
-            <div
-              className="captcha"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '10px 10px 30px 10px',
-              }}
-            >
+            <div className="captcha">
               <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey={process.env.REACT_APP_RECAPTCHA}
                 onChange={handleCaptchaChange}
-                theme="dark"
+                theme={theme}
               />
             </div>
           </div>
