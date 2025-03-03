@@ -29,6 +29,7 @@ function Footer() {
           />
           <Box component="img" className="mui__logo" alt="Php" src={MuiLogo} />
         </div>
+        <a href="/cookie">Cookie tájékoztató</a>
         <p>&copy; {year} adamistvan.hu | Horváth Ádám István</p>
         <p>Minden jog fenntartva.</p>
       </div>

@@ -17,17 +17,24 @@ const Cookie = () => {
   }, []);
 
   return (
-    <Box sx={{ padding: 3 }}>
-      <Paper sx={{ padding: 3 }}>
+    <Box>
+      <Paper
+        sx={{
+          padding: 3,
+          backgroundColor: 'transparent',
+          color: 'var(--text-color)',
+          boxShadow: 'none',
+        }}
+      >
         <Typography variant="h4" gutterBottom>
-          1. Cookie Tájékoztató
+          <h1>Cookie Tájékoztató</h1>
         </Typography>
         <Typography variant="body1" paragraph>
-          2. Mi az a cookie? A cookie-k kis méretű, betűket és számokat,
-          központozást és egyéb, technikai karaktereket tartalmazó fájlok,
-          amelyek egyes weboldalak látogatásakor kerülnek tárolásra eszközén
-          (számítógép, mobiltelefon, tablet, okos TV stb.). Ezek olyan, a
-          weboldalak felhasználását segítő informatikai adatok, melyeket a
+          <h2>1. Mi az a cookie? </h2>A cookie-k kis méretű, betűket és
+          számokat, központozást és egyéb, technikai karaktereket tartalmazó
+          fájlok, amelyek egyes weboldalak látogatásakor kerülnek tárolásra
+          eszközén (számítógép, mobiltelefon, tablet, okos TV stb.). Ezek olyan,
+          a weboldalak felhasználását segítő informatikai adatok, melyeket a
           webszerver küld a felhasználó böngészőjének, a felhasználó eszközén
           tárolódnak, és a böngésző visszaküldi a szervernek minden alkalommal,
           amikor a webszerverről adatot kér. Nem tartalmaznak futtatható
@@ -75,88 +82,107 @@ const Cookie = () => {
           el a harmadik fél honlapjára.
         </Typography>
         <Typography variant="h5" gutterBottom>
-          3. Az oldalon használt cookie-k kategóriái
+          <h2>2. Az oldalon használt cookie-k kategóriái</h2>
         </Typography>
         <Typography variant="body1" paragraph>
-          3.1. Funkcionális és a weboldal működéséhez elengedhetetlenül
+          2.1. Funkcionális és a weboldal működéséhez elengedhetetlenül
           szükséges cookie-k
         </Typography>
         <Typography variant="body1" paragraph>
-          3.2. Statisztikai cookie-k
+          2.2. Statisztikai cookie-k
         </Typography>
         <Typography variant="body1" paragraph>
-          3.2.1. Google Analytics
+          2.2.1. Google Analytics
         </Typography>
         <Typography variant="body1" paragraph>
-          3.3. Hirdetés célzó és marketing cookie-k
+          2.3. Hirdetés célzó és marketing cookie-k
         </Typography>
 
         <Typography variant="h5" gutterBottom>
-          4. Tárolt cookie-k
+          <h2>3. Tárolt cookie-k</h2>
         </Typography>
         <List>
           {Object.entries(cookies).map(([key, value]) => (
             <ListItem key={key}>
-              <ListItemText
-                primary={<strong>{key}:</strong>}
-                secondary={value}
-              />
+              <ListItemText primary={<strong>{key}:</strong>} />
+              <p>{value}</p>
             </ListItem>
           ))}
         </List>
 
         <Typography variant="h5" gutterBottom>
-          5. Adatfeldolgozók
+          <h2>4. Adatfeldolgozók</h2>
         </Typography>
         <Typography variant="body1" paragraph>
           Az adatfeldolgozók listáját az adatkezelési tájékoztató tartalmazza,
           amely elérhető az adatkezelő honlapján.
         </Typography>
         <Typography variant="h5" gutterBottom>
-          6. Cookie-k kezelése
+          <h2>5. Cookie-k kezelése</h2>
         </Typography>
         <Typography variant="body1" paragraph>
           Az oldalra látogatóknak lehetőségük van a honlap által alkalmazott
           cookie-k törlésére, tiltására, illetve beállítások módosítására.
         </Typography>
-        <List>
-          <ListItem>
-            <ListItemText
-              primary="Chrome"
-              secondary="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=hu"
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary="Chrome (Mobil)"
-              secondary="https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DAndroid&hl=hu"
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary="Edge"
-              secondary="https://support.microsoft.com/hu-hu/help/4027947/microsoft-edge-delete-cookies"
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary="Firefox"
-              secondary="https://support.mozilla.org/hu/kb/weboldalak-altal-elhelyezett-sutik-torlese-szamito"
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary="Safari (asztali eszközök)"
-              secondary="https://support.apple.com/hu-hu/guide/safari/sfri11471/mac"
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText
-              primary="Safari (mobil eszközök)"
-              secondary="https://support.apple.com/hu-hu/HT201265"
-            />
-          </ListItem>
-        </List>
+        <h3>
+          <a
+            href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=hu"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Chrome
+          </a>
+        </h3>
+
+        <h3>
+          <a
+            href="https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DAndroid&hl=hu"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Chrome (Mobil)
+          </a>
+        </h3>
+
+        <h3>
+          <a
+            href="https://support.microsoft.com/hu-hu/help/4027947/microsoft-edge-delete-cookies"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Edge
+          </a>
+        </h3>
+
+        <h3>
+          <a
+            href="https://support.mozilla.org/hu/kb/weboldalak-altal-elhelyezett-sutik-torlese-szamito"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Firefox
+          </a>
+        </h3>
+
+        <h3>
+          <a
+            href="https://support.apple.com/hu-hu/guide/safari/sfri11471/mac"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Safari (asztali eszközök)
+          </a>
+        </h3>
+
+        <h3>
+          <a
+            href="https://support.apple.com/hu-hu/HT201265"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Safari (mobil eszközök)
+          </a>
+        </h3>
       </Paper>
     </Box>
   );
