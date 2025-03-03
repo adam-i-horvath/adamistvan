@@ -35,7 +35,7 @@ function Navbar() {
       <NavLink
         to="/"
         className="nav-link-avatar"
-        activeClassName="active"
+        activeclassname="active"
         onClick={() => setActiveLabel('Kezdőlap')}
       >
         <div className="icon-container">
@@ -52,7 +52,7 @@ function Navbar() {
         <NavLink
           to="/rolam"
           className="nav-link"
-          activeClassName="active"
+          activeclassname="active"
           onClick={() => setActiveLabel('Rólam')}
         >
           <div className="icon-container">
@@ -65,7 +65,7 @@ function Navbar() {
         <NavLink
           to="/projektek"
           className="nav-link"
-          activeClassName="active"
+          activeclassname="active"
           onClick={() => setActiveLabel('Projektek')}
         >
           <div className="icon-container">
@@ -78,7 +78,7 @@ function Navbar() {
         <NavLink
           to="/kapcsolat"
           className="nav-link"
-          activeClassName="active"
+          activeclassname="active"
           onClick={() => setActiveLabel('Kapcsolat')}
         >
           <div className="icon-container">
