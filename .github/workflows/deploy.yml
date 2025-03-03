@@ -13,6 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4 # Updated to v4 which uses Node.js 20
 
+      - name: Create .env file
+        run: echo "REACT_APP_TEST=${{ secrets.REACT_APP_TEST }}" > .env
+
       - name: Install dependencies
         run: npm install
 
