@@ -93,6 +93,7 @@ function Kapcsolat() {
 
   return (
     <div className="kapcsolat">
+      fix
       <div className="left-column">
         <h1>Kapcsolat</h1>
         <p>
