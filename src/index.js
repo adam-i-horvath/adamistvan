@@ -12,6 +12,7 @@ console.log(process.env.REACT_APP_TEST);
 
 root.render(
   <Router>
+    test
     <App />
     <CookieBanner />
   </Router>
