@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Kapcsolat.css';
 import { Alert, Snackbar, Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function Kapcsolat() {
+  const recaptchaRef = useRef(null);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,9 +22,7 @@ function Kapcsolat() {
     severity: 'success',
   });
 
-  const [timer, setTimer] = useState(null);
-  const [, setCountdown] = useState(5);
-  const [cancelled, setCancelled] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,28 +32,17 @@ function Kapcsolat() {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setCancelled(false);
-    setCountdown(5);
-    setTimer(
-      setInterval(() => {
-        setCountdown((prev) => {
-          if (prev === 1) {
-            clearInterval(timer);
-            sendEmail();
-          }
-          return prev - 1;
-        });
-      }, 1000)
-    );
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
   };
 
-  const sendEmail = async () => {
-    if (cancelled) {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!captchaValue) {
       setAlert({
         open: true,
-        message: 'Az üzenet küldése megszakítva.',
+        message: 'Kérlek, igazold, hogy nem vagy robot!',
         severity: 'warning',
       });
       return;
@@ -78,7 +68,6 @@ function Kapcsolat() {
         message: '',
       });
 
-      // Send confirmation email
       await fetch('https://adamistvan.hu/send-confirmation-email.php', {
         method: 'POST',
         headers: {
@@ -93,6 +82,9 @@ function Kapcsolat() {
         severity: 'error',
       });
     }
+
+    recaptchaRef.current.reset();
+    setCaptchaValue(null);
   };
 
   const handleClose = () => {
@@ -123,7 +115,6 @@ function Kapcsolat() {
       </div>
       <div className="right-column">
         <h2>Írj üzenetet</h2>
-        <p>{process.env.REACT_APP_TEST}</p>
         <p>
           Kérem, töltse ki az alábbi kapcsolatfelvételi űrlapot, hogy
           kapcsolatba lépjen velem.
@@ -162,6 +153,13 @@ function Kapcsolat() {
               onChange={handleChange}
               required
             ></textarea>
+          </div>
+          <div className="recaptcha-container">
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={process.env.REACT_APP_RECAPTCHA}
+              onChange={handleCaptchaChange}
+            />
           </div>
           <div className="button-group">
             <Button
