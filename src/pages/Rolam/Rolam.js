@@ -14,7 +14,7 @@ const Rolam = () => {
       <div className="grid">
         <div className="card">
           <CodeIcon className="icon" />
-          <h3>Fejlesztő és Adatbázis-szakértő</h3>
+          <h3>Fejlesztő és adatbázis-szakértő.</h3>
           <p>
             Weboldalakat, adatbázisokat és AI-integrációkat fejlesztek modern
             technológiákkal, mint a React, Material UI és Node.js.
@@ -23,7 +23,7 @@ const Rolam = () => {
 
         <div className="card">
           <MusicNoteIcon className="icon" />
-          <h3>Zenei Producer és DJ</h3>
+          <h3>Zenei producer és DJ.</h3>
           <p>
             Elektronikus zenét készítek deep house, techno és ambient
             műfajokban.
@@ -43,7 +43,7 @@ const Rolam = () => {
 
         <div className="card">
           <BrushIcon className="icon" />
-          <h3>Kreatív Projektek és Dizájn</h3>
+          <h3>Kreatív projektek és dizájn.</h3>
           <p>
             Szenvedélyem a geometriai CAD-alapú dizájn és az AI-alapú vizuális
             projektek.
@@ -52,7 +52,7 @@ const Rolam = () => {
 
         <div className="card">
           <PsychologyIcon className="icon" />
-          <h3>Adatfeldolgozás és Mesterséges Intelligencia</h3>
+          <h3>Adatfeldolgozás és mesterséges intelligencia.</h3>
           <p>
             Erősségem a problémamegoldás és az AI-alapú adatelemzés a gyártási
             hibák és folyamatok optimalizálására.
@@ -61,7 +61,7 @@ const Rolam = () => {
 
         <div className="card">
           <ComputerIcon className="icon" />
-          <h3>IT és Technológiai Fejlesztések</h3>
+          <h3>IT és technológiai Fejlesztések.</h3>
           <p>
             Tapasztalatom van szoftverfejlesztésben, hálózatokban és
             automatizált rendszerek építésében.
@@ -70,7 +70,7 @@ const Rolam = () => {
 
         <div className="card">
           <BuildIcon className="icon" />
-          <h3>Problémamegoldás és Innováció</h3>
+          <h3>Problémamegoldás és innováció.</h3>
           <p>
             Mindig keresem az új megoldásokat, és szívesen hozok létre hatékony
             rendszereket a hatékonyság növelése érdekében.

@@ -4,9 +4,11 @@ import './Kapcsolat.css';
 import { Alert, Snackbar, Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ReCAPTCHA from 'react-google-recaptcha';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Kapcsolat() {
   const { theme } = useContext(ThemeContext);
@@ -97,22 +99,7 @@ function Kapcsolat() {
     <div className={`kapcsolat ${theme}`}>
       <div className="left-column">
         <h1>Kapcsolat</h1>
-        <h2>Elérhetőségek</h2>
-        <div className="social-media">
-          <div>
-            <FacebookIcon /> Facebook
-          </div>
-          <div>
-            <TwitterIcon /> Twitter
-          </div>
-          <div>
-            <LinkedInIcon /> LinkedIn
-          </div>
-        </div>
-      </div>
-      <div className="right-column">
-        <h2>Írj üzenetet</h2>
-        <p>Írj nekem üzenetet az űrlapon keresztül!</p>
+        <h2>Írj nekem üzenetet az űrlapon keresztül, vagy küldj email-t!</h2>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group-row">
             <div className="form-group">
@@ -148,9 +135,9 @@ function Kapcsolat() {
               required
             ></textarea>
           </div>
-          <div class="checkbox__container">
+          <div className="checkbox__container">
             <label
-              for="agree"
+              htmlFor="agree"
               style={{ display: 'flex', alignItems: 'center' }}
             >
               <input type="checkbox" id="agree" required />
@@ -159,8 +146,9 @@ function Kapcsolat() {
                 href="/adatkezelesi-tajekoztato-kapcsolatfelveteli-urlaphoz.pdf"
                 style={{ marginLeft: '5px' }}
               >
-                adatkezelési tájékoztatót.
+                adatkezelési tájékoztatót
               </a>
+              .
             </label>
           </div>
           <div
@@ -192,6 +180,35 @@ function Kapcsolat() {
             </Button>
           </div>
         </form>
+      </div>
+      <div className="right-column">
+        <div className="social-media">
+          <div className="social-media__line">
+            <a href="/kapcsolat">
+              <FacebookIcon /> Facebook
+            </a>
+          </div>
+          <div className="social-media__line">
+            <a href="/kapcsolat">
+              <InstagramIcon /> Instagram
+            </a>
+          </div>
+          <div className="social-media__line">
+            <a href="/kapcsolat">
+              <LinkedInIcon /> LinkedIn
+            </a>
+          </div>
+          <div className="social-media__line">
+            <a href="/kapcsolat">
+              <GitHubIcon /> GitHub
+            </a>
+          </div>
+          <div className="social-media__line">
+            <a href="/kapcsolat">
+              <ContactMailIcon /> hello@adamistvan.hu
+            </a>
+          </div>
+        </div>
       </div>
       <Snackbar open={alert.open} autoHideDuration={6000} onClose={handleClose}>
         <Alert

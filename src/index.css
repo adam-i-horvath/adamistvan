@@ -10,6 +10,7 @@
   --navbar-hover-background-color: #e4e6eb;
   --navbar-active-background-color: #d8dadf;
   --primary-color: #1877f2;
+  --primary-color-hover: #146adc;
   --secondary-color: #13cf13;
   --tertiary-color: #f02849;
   --simple-white: #ffffff;
@@ -24,8 +25,10 @@
   --navbar-hover-background-color: #3a3b3c;
   --navbar-active-background-color: #4a4b4d;
   --primary-color: #1877f2;
+  --primary-color-hover: #146adc;
   --secondary-color: #13cf13;
   --tertiary-color: #f02849;
+  --simple-white: #ffffff;
 }
 
 body {
@@ -38,14 +41,18 @@ body {
 
 h1 {
   font-family: 'Noe Display', Georgia, Times, serif;
-  font-size: 4rem;
-  margin: 15px 0px 0px 0px;
+  font-size: 3rem;
+  padding: 10px 0;
 }
 
 h2 {
-    font-size: 2rem;
-    color: var(--tertiary-color);
-    margin: 15px 0px 0px 0px;
+  font-size: 2rem;
+  padding: 10px 0 10px 0 ;
+  color: var(--tertiary-color);
+}
+
+p {
+  font-size: 1.2rem;
 }
 
 @media (max-width: 600px) {

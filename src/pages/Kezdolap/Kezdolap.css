@@ -1,44 +1,44 @@
 .home {
-    display: flex;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  flex: 1;
+  max-width: 60%;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 350px; /* Adjust as needed */
+  height: auto;
+  border-radius: 30px;
+}
+
+@media (max-width: 900px) {
+  .content {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-  }
-  
-  .home h1 {
-    font-family: 'Noe Display', Georgia, Times, serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .home h2 {
-    font-size: 2rem;
-    color: var(--tertiary-color);
-    margin-bottom: 15px;
-    font-style: italic;
-    text-align: center;
-  }
-  
-  .home p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    text-align: justify;
-
   }
 
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 2.5rem;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    p {
-      font-size: 1rem;
-    }
+  .text {
+    max-width: 100%;
   }
+
+  .image {
+    margin-top: 10px;
+  }
+
+  .image img {
+    width: 200px;
+  }
+}

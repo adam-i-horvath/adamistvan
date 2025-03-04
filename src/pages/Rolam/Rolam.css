@@ -1,24 +1,9 @@
 .rolam {
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .rolam h1 {
-    font-family: 'Noe Display', Georgia, Times, serif;
-    font-size: 3rem;
-    margin-bottom: 40px;
   }
 
   .rolam img {
     width: 400px;
-  }
-
-
-  .rolam p {
-    font-size: 1.2em;
-    color: var(--text-color-secondary);
-    margin-bottom: 15px;
   }
   
   .grid {

@@ -1,25 +1,7 @@
 .projektek {
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
-  
-  h1 {
-    font-family: 'Noe Display', Georgia, Times, serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
+
   .project {
     margin-bottom: 30px;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    color: var(--tertiary-color);
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 1.2rem;
   }

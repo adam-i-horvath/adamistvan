@@ -27,8 +27,8 @@
   }
 
 .react__logo, .php__logo, .sql__logo, .wordpress__logo, .mui__logo {
-    width: 50px;
-    height: auto;
+    width: auto;
+    height: 25px;
     filter: grayscale(100%);
     margin: 20px;
 }

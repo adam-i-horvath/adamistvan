@@ -16,7 +16,7 @@ function App() {
   return (
     <ThemeProvider>
       <div className="app__container">
-        <div className="adam">
+        <div className="app__main">
           <Navbar />
           <Routes>
             <Route path="/" element={<Kezdolap />} />
