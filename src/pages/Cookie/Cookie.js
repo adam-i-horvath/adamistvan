@@ -27,7 +27,7 @@ const Cookie = () => {
         }}
       >
         <Typography variant="h4" gutterBottom>
-          <h1>Cookie Tájékoztató</h1>
+          <h1>Cookie tájékoztató</h1>
         </Typography>
         <Typography variant="body1" paragraph>
           <h2>1. Mi az a cookie? </h2>A cookie-k kis méretű, betűket és

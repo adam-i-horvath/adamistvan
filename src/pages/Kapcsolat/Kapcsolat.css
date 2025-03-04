@@ -93,8 +93,7 @@ textarea:focus {
   padding-bottom: 30px;
 }
 
-.send-button,
-.cancel-button {
+.send-button {
   flex: 1;
   padding: 10px 20px;
   font-size: 1.2rem;
@@ -118,15 +117,24 @@ textarea:focus {
   background-color: var(--tertiary-color);
 }
 
-.cancel-button {
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  transition: background-color 0.3s ease, color 0.3s ease; /* Add animation */
+.checkbox__container {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
 }
 
-.cancel-button:hover {
-  background-color: var(--primary-color);
-  color: #fff;
+.checkbox__container input[type="checkbox"] {
+  width: 16px; /* Adjust checkbox size */
+  height: 16px;
+  margin-right: 5px;
+}
+
+.checkbox__container label {
+  font-size: 0.9em; /* Adjust text size */
+}
+
+.checkbox__container label a {
+text-decoration: underline;
 }
 
 /* Responsive styles for mobile view */

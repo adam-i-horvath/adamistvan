@@ -16,6 +16,10 @@
     padding: 0 15px;
   }
 
+  .footer__content p {
+    font-size: 14px;
+  }
+
 .logo__container {
     display: flex;
     align-items: center;
@@ -35,11 +39,14 @@
 
 a {
   color: var(--navbar-text-color);
-  font-size: 1.2rem;
   text-decoration: none;
 }
 
- 
+.footer_links a {
+  margin: 5px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
 
  @media (max-width: 600px) {
   .react__logo, .php__logo, .sql__logo, .wordpress__logo, .mui__logo {
@@ -48,5 +55,18 @@ a {
     filter: grayscale(100%);
     margin: 20px;
   }
-    
+
+  .footer {
+    height: 230px;
+  }
+
+  .footer_links {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .footer_links a {
+    font-size: 0.9rem;
+  }
 }

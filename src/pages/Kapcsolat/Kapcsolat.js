@@ -156,7 +156,24 @@ function Kapcsolat() {
               required
             ></textarea>
           </div>
-          <div className="recaptcha-container">
+          <div class="checkbox__container">
+            <label for="agree">
+              <input type="checkbox" id="agree" required />
+              Elfogadom az{' '}
+              <a href="/adatkezelesi-tajekoztato-kapcsolatfelveteli-urlaphoz.pdf">
+                adatkezelési tájékoztatót.
+              </a>
+            </label>
+          </div>
+          <div
+            className="recaptcha-container"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginBottom: '15px',
+            }}
+          >
             <div className="captcha">
               <ReCAPTCHA
                 ref={recaptchaRef}
