@@ -97,11 +97,6 @@ function Kapcsolat() {
     <div className={`kapcsolat ${theme}`}>
       <div className="left-column">
         <h1>Kapcsolat</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
-          vestibulum erat. Proin euismod, nisl eget consectetur sagittis, nisl
-          nunc consectetur nisi, euismod consectetur nisl nunc euismod nisi.
-        </p>
         <h2>Elérhetőségek</h2>
         <div className="social-media">
           <div>
@@ -117,10 +112,7 @@ function Kapcsolat() {
       </div>
       <div className="right-column">
         <h2>Írj üzenetet</h2>
-        <p>
-          Kérem, töltse ki az alábbi kapcsolatfelvételi űrlapot, hogy
-          kapcsolatba lépjen velem.
-        </p>
+        <p>Írj nekem üzenetet az űrlapon keresztül!</p>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group-row">
             <div className="form-group">
@@ -157,10 +149,16 @@ function Kapcsolat() {
             ></textarea>
           </div>
           <div class="checkbox__container">
-            <label for="agree">
+            <label
+              for="agree"
+              style={{ display: 'flex', alignItems: 'center' }}
+            >
               <input type="checkbox" id="agree" required />
               Elfogadom az{' '}
-              <a href="/adatkezelesi-tajekoztato-kapcsolatfelveteli-urlaphoz.pdf">
+              <a
+                href="/adatkezelesi-tajekoztato-kapcsolatfelveteli-urlaphoz.pdf"
+                style={{ marginLeft: '5px' }}
+              >
                 adatkezelési tájékoztatót.
               </a>
             </label>

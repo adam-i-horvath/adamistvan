@@ -8,21 +8,25 @@
     padding: 20px;
   }
   
-  h1 {
+  .home h1 {
     font-family: 'Noe Display', Georgia, Times, serif;
     font-size: 3rem;
     margin-bottom: 20px;
   }
   
-  h2 {
+  .home h2 {
     font-size: 2rem;
     color: var(--tertiary-color);
     margin-bottom: 15px;
+    font-style: italic;
+    text-align: center;
   }
   
-  p {
+  .home p {
     font-size: 1.2rem;
     margin-bottom: 15px;
+    text-align: justify;
+
   }
 
   @media (max-width: 600px) {
