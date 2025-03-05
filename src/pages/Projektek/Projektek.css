@@ -1,7 +1,15 @@
 .projektek {
-    padding: 20px;
-  }
+  padding: 20px;
+}
 
-  .project {
-    margin-bottom: 30px;
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 column for mobile */
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+      grid-template-columns: 1fr 1fr; /* Two columns on desktop */
   }
+}

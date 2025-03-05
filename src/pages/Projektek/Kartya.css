@@ -1,20 +1,45 @@
 .kartya__container {
-    background-color: var(--background-color) !important;
-    color: var(--text-color) !important;
-    box-shadow: none !important;
-    border: none !important;
-    background-color: red !important;
-    margin: 15px 0px !important;
-    border-radius: 10px !important;
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  box-shadow: none !important;
+  border-radius: 10px !important;
+  margin: 0px 0px !important;
+}
 
-  }
-  
-  .kartya__main {
-    background-color: var(--navbar-background-color);
-    padding: 15px !important;
-  }
-  
-  .kartya__title {
-    margin: 0px;
-    text-transform: uppercase;
-  }
+.kartya__main {
+  background-color: var(--navbar-background-color);
+  padding: 15px !important;
+}
+
+.kartya__title {
+  margin: 0px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--tertiary-color);
+}
+
+.kartya__description {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.kartya__info {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.kartya__button {
+  margin-top: 12px !important;
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  box-shadow: none !important;
+  border-radius: 20px !important;
+  height: 40px;
+}
+
+.kartya__button__container {
+  align-items: center;
+  justify-content: center;
+}
