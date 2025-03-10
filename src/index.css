@@ -13,6 +13,7 @@
   --primary-color-hover: #146adc;
   --secondary-color: #13cf13;
   --tertiary-color: #f02849;
+  --purple-color: #7744d0;
   --simple-white: #ffffff;
 }
 
@@ -28,6 +29,7 @@
   --primary-color-hover: #146adc;
   --secondary-color: #13cf13;
   --tertiary-color: #f02849;
+  --purple-color: #7744d0;
   --simple-white: #ffffff;
 }
 
@@ -48,6 +50,14 @@ h2 {
   font-size: 2rem;
   padding: 10px 0 10px 0 ;
   color: var(--tertiary-color);
+}
+
+h3 span {
+  font-size: 1.5rem;
+  padding: 10px 20px 10px 20px ;
+  color: var(--text-color);
+  background-color: var(--purple-color);
+  border-radius: 10px;
 }
 
 p {

@@ -19,9 +19,9 @@
   flex-direction: column;
   gap: 20px;
   margin: 20px 0;
-  background-color: var(--navbar-background-color);
+  background-color: var(--purple-color);
   padding: 40px;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 .social-media div {

@@ -3,6 +3,7 @@ import './Projektek.css';
 import Kartya from './Kartya';
 import KartyaDev from './Kartya_dev';
 import kartya_data from './projektek_data.json'; // Importing JSON data
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 function Projektek() {
   const [repos, setRepos] = useState([]);
@@ -31,13 +32,20 @@ function Projektek() {
   return (
     <div className="projektek">
       <h1>Projektek</h1>
-      <h2>- Élő weboldal projektek:</h2>
+      <h3 style={{ display: 'flex', alignItems: 'center' }}>
+        <span>Élő weboldalak</span>
+        <div className="icon_live">
+          <FiberManualRecordIcon />
+        </div>
+      </h3>
       <div className="project__dev">
         {kartya_data.project_developed.map((project, index) => (
           <KartyaDev key={index} project={project} />
         ))}
       </div>
-      <h2>- GitHub (kódok):</h2>
+      <h3>
+        <span>GitHub (kódok)</span>
+      </h3>
       <div className="project-grid">
         {repos.map((repo, index) => (
           <Kartya key={index} project={repo} />
