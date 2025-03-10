@@ -3,9 +3,10 @@
   color: var(--text-color) !important;
   box-shadow: none !important;
   border: none !important;
-  background-color: red !important;
   margin: 15px 0px !important;
   border-radius: 10px !important;
+  max-width: 1200px;
+  text-align: justify;
 
 }
 
@@ -16,5 +17,60 @@
 
 .kartya__dev_title {
   margin: 0px;
-  text-transform: uppercase;
+  text-transform: lowercase;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.kartya__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kartya__img_desktop {
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Limit max size */
+}
+
+.kartya__img_mobile {
+  width: 40%; /* Mobile image smaller than desktop */
+  max-width: 400px; /* Adjust as needed */
+}
+
+.kartya__img_full {
+  width: 100%; /* Ensures full width */
+  height: auto; /* Keeps aspect ratio */
+  display: block;
+  object-fit: contain; /* No cropping */
+  border-radius: 5px;
+}
+
+.kartya__dev_link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.kartya__dev_icon {
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.kartya__dev_link:hover .kartya__dev_icon {
+  opacity: 1;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .kartya__img_mobile {
+    width: 70%; /* Increase size for better visibility */
+    max-width: 350px;
+  }
 }

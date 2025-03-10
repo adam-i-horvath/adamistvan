@@ -43,3 +43,30 @@
   align-items: center;
   justify-content: center;
 }
+
+.kartya__dev_container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.kartya__img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.kartya__img_desktop,
+.kartya__img_mobile {
+  flex: 1 1 48%; /* Makes them take equal width in desktop view */
+  display: flex;
+  justify-content: center;
+}
+
+.kartya__img_responsive {
+  width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Prevents stretching */
+  max-width: 100%;
+  border-radius: 5px;
+}

@@ -1,21 +1,48 @@
 import React from 'react';
-import { Card, CardContent, CardMedia } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography, Link } from '@mui/material';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import './Kartya_dev.css';
 
 const KartyaDev = ({ project }) => {
-  const imagePath = require(`../../assets/img/${project.image}`);
+  const desktopImagePath = require(`../../assets/img/${project.desktopImage}`);
+  const mobileImagePath = require(`../../assets/img/${project.mobileImage}`);
+
   return (
     <Card className="kartya__dev_container">
       <CardContent className="kartya__dev_main">
-        <h2 className="kartya__dev_title">{project.title}</h2>
+        {/* Title with link */}
+        <Typography variant="h5" component="div" className="kartya__dev_title">
+          <Link
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="kartya__dev_link"
+          >
+            {project.title}
+            <OpenInNewIcon className="kartya__dev_icon" />
+          </Link>
+        </Typography>
+
         <p className="kartya__description">{project.description}</p>
-        <CardMedia
-          component="img"
-          height="250"
-          image={imagePath}
-          alt={project.image}
-          style={{ borderRadius: '5px' }}
-        />
+
+        <div className="kartya__img">
+          <div className="kartya__img_desktop">
+            <CardMedia
+              component="img"
+              image={desktopImagePath}
+              alt="Desktop View"
+              className="kartya__img_full"
+            />
+          </div>
+          <div className="kartya__img_mobile">
+            <CardMedia
+              component="img"
+              image={mobileImagePath}
+              alt="Mobile View"
+              className="kartya__img_full"
+            />
+          </div>
+        </div>
       </CardContent>
     </Card>
   );

@@ -31,13 +31,13 @@ function Projektek() {
   return (
     <div className="projektek">
       <h1>Projektek</h1>
-      <div className="project">
-        <div className="flex flex-wrap gap-4">
-          {kartya_data.project_developed.map((project, index) => (
-            <KartyaDev key={index} project={project} />
-          ))}
-        </div>
+      <h2>- Élő weboldal projektek:</h2>
+      <div className="project__dev">
+        {kartya_data.project_developed.map((project, index) => (
+          <KartyaDev key={index} project={project} />
+        ))}
       </div>
+      <h2>- GitHub (kódok):</h2>
       <div className="project-grid">
         {repos.map((repo, index) => (
           <Kartya key={index} project={repo} />

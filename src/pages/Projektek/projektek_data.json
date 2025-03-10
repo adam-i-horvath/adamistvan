@@ -1,19 +1,18 @@
 {
   "project_developed": [
     {
-      "title": "Lorem Ipsum",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac vestibulum erat. Proin euismod, nisl eget consectetur sagittis, nisl nunc consectetur nisi, euismod consectetur nisl nunc euismod nisi.",
-      "image": "sample.jpg"
+      "title": "noiszemmel.eu",
+      "description": "A noiszemmel.eu egy WordPress alapú weboldal, amelyet a Kispesti Önkormányzat számára fejlesztettem. A cél egy modern, reszponzív és könnyen kezelhető platform létrehozása volt, amely információkat nyújt a helyi lakosok számára. Az oldal keresőoptimalizált (SEO), és integrált Google Analytics segítségével követi a látogatói statisztikákat. A gyors betöltési idő és a biztonsági beállítások biztosítják a stabil működést. A WordPress lehetővé teszi az önkormányzat számára a tartalmak egyszerű frissítését, így az oldal mindig naprakész marad.",
+      "desktopImage": "noiszemmel_desktop.png",
+      "mobileImage": "noiszemmel_mobile.png",
+      "link": "https://noiszemmel.eu"
     },
     {
-      "title": "Dolor",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac vestibulum erat. Proin euismod, nisl eget consectetur sagittis, nisl nunc consectetur nisi, euismod consectetur nisl nunc euismod nisi.",
-      "image": "sample.jpg"
-    },
-    {
-      "title": "Sit Ames",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac vestibulum erat. Proin euismod, nisl eget consectetur sagittis, nisl nunc consectetur nisi, euismod consectetur nisl nunc euismod nisi.",
-      "image": "sample.jpg"
+      "title": "pje.eu",
+      "description": "A pje.hu a Püspökladány Jövőjéért Egyesület WordPress alapú weboldala, amely információs és közösségi platformként szolgál. Az oldal különböző technológiákat alkalmaz, többek között SEO optimalizációt, hírlevél-rendszert, petíciókezelőt és egy blogfelületet a legfrissebb hírek és bejegyzések megosztására. A reszponzív kialakítás biztosítja a könnyű használatot minden eszközön. A weboldal célja, hogy segítse az egyesület munkáját, aktivizálja a helyi közösséget, és átlátható tájékoztatást nyújtson a lakosok számára.",
+      "desktopImage": "pje_desktop.png",
+      "mobileImage": "pje_mobile.png",
+      "link": "https://pje.hu"
     }
   ]
 }

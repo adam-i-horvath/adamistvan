@@ -8,8 +8,23 @@
   gap: 20px;
 }
 
+.project__dev {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project__dev > * {
+  flex: 1 1 100%; /* One column on smaller screens */
+}
+
 @media (min-width: 768px) {
   .project-grid {
       grid-template-columns: 1fr 1fr; /* Two columns on desktop */
+  }
+
+  .project__dev > * {
+    flex: 1 1 calc(50% - 10px); /* Two columns on larger screens */
+
   }
 }
