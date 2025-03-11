@@ -6,6 +6,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import './Navbar.css';
 import ImageAdam from '../../assets/img/adam.jpg';
+import t from '../../utils/t';
 
 function Navbar() {
   const location = useLocation();
@@ -45,7 +46,7 @@ function Navbar() {
           </div>
         </div>
         <span className={activeLabel === 'Kezdőlap' ? 'show' : 'hide'}>
-          Üdv! 👋
+          {t('profileMessage')}
         </span>
       </NavLink>
       <nav className="navbar">

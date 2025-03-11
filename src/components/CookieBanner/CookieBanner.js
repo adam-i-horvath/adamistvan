@@ -1,6 +1,6 @@
 import CookieConsent, { Cookies } from 'react-cookie-consent';
-
 import React from 'react';
+import t from '../../utils/t';
 
 const CookieBanner = () => {
   return (
@@ -19,6 +19,7 @@ const CookieBanner = () => {
           textAlign: 'left',
           alignItems: 'center',
           justifyContent: 'center',
+          zIndex: '10000',
         }}
         buttonStyle={{
           color: '#e4e6eb',
@@ -27,8 +28,8 @@ const CookieBanner = () => {
           margin: '5px 10px 5px 5px',
           borderRadius: '5px',
         }}
-        buttonText="Elfogad"
-        declineButtonText="Elutasít"
+        buttonText={t('accept')}
+        declineButtonText={t('decline')}
         declineButtonStyle={{
           color: '#e4e6eb',
           background: '#f02849',
@@ -37,13 +38,36 @@ const CookieBanner = () => {
           borderRadius: '5px',
         }}
       >
-        Ez a weboldal a felhasználói élmény javítása érdekében sütiket
-        használhat.
-        <br></br>
-        <a style={{ color: '#e4e6eb' }} href="/cookie">
-          Cookie szabályzat
-        </a>
-        <p>{Cookies}</p>
+        <div className="cookie__container">
+          <div className="cookie__text"> {t('cookieText')}</div>
+          <div
+            className="cookie__links"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '5px',
+            }}
+          >
+            <br></br>
+            <a
+              style={{
+                color: '#e4e6eb',
+                marginRight: '5px',
+                textDecoration: 'underline',
+              }}
+              href="/adatkezelesi-tajekoztato.pdf"
+            >
+              {t('privacyPolicy')}
+            </a>
+            <a
+              style={{ color: '#e4e6eb', textDecoration: 'underline' }}
+              href="/cookie"
+            >
+              {t('cookiePolicy')}
+            </a>
+          </div>
+          <p>{Cookies}</p>
+        </div>
       </CookieConsent>
     </div>
   );

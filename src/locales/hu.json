@@ -1,0 +1,15 @@
+{
+  "welcome": "Hello, a nevem Ádám.",
+  "quote": "„Azok, akik bármit el tudnak képzelni, meg tudják teremteni a lehetetlent. -Alan Turing''",
+  "home_line_01": "Horváth Ádám István vagyok, CAD-CAM technológus és informatikai fejlesztő, aki elkötelezett az adatelemzés, a szoftverfejlesztés és a digitális megoldások iránt.",
+  "home_line_02": "Tapasztalatom kiterjed a gyártástechnológiára, adatfeldolgozásra és az ipari folyamatok optimalizálására. Az informatikában különböző technológiákkal és nyelvekkel dolgozom, beleértve a JavaScriptet, a Reactet, valamint az adatbázis-kezelést és az automatizált rendszerek fejlesztését.",
+  "home_line_03": "A célom, hogy intuitív, jól strukturált és modern technológiákkal támogatott rendszereket építsek, amelyek hozzájárulnak a hatékonyabb és átláthatóbb munkavégzéshez.",
+  "switchLangTextLight": "Világos mód",
+  "switchLangTextDark": "Sötét mód",
+  "profileMessage": "Üdv! 👋",
+  "cookieText": "Ez a weboldal sütiket használ a felhasználói élmény javítása érdekében. A sütik elfogadása segíti az oldal működését, de a beállítások módosíthatók. További információkért és a részletes szabályzatért, olvassa el az adatkezelési és cookie szabályzatot.",
+  "cookiePolicy": "Cookie szabályzat",
+  "privacyPolicy": "Adatkezelési tájékoztató",
+  "accept": "Elfogadom",
+  "decline": "Elutasítom"
+}

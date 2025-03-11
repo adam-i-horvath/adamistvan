@@ -1,0 +1,15 @@
+{
+  "welcome": "Hello! My name is Adam.",
+  "quote": "„Those who can imagine anything, can create the impossible. -Alan Turing''",
+  "home_line_01": "I am István Ádám Horváth, CAD-CAM technologist and IT developer, dedicated to data analysis, software development and digital solutions",
+  "home_line_02": "My experience includes manufacturing technology, data processing and industrial process optimization. In IT, I work with various technologies and languages, including JavaScript, React, database management and automated systems development.",
+  "home_line_03": "My goal is to build intuitive, well-structured systems supported by modern technologies that contribute to more efficient and transparent work.",
+  "switchLangTextLight": "Light Mode",
+  "switchLangTextDark": "Dark Mode",
+  "profileMessage": "Hey! 👋",
+  "cookieText": "This website uses cookies to improve user experience. Accepting cookies helps the site function, but settings can be changed. For more information and the detailed policy, please read the privacy and cookie policy.",
+  "cookiePolicy": "Cookie Policy",
+  "privacyPolicy": "Privacy Policy",
+  "accept": "Accept",
+  "decline": "Decline"
+}
