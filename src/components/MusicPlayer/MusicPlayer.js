@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { IconButton, Slider, Box, Typography } from '@mui/material';
-import { PlayArrow, Pause, VolumeUp } from '@mui/icons-material';
+import { PlayArrow, Pause, VolumeUp, VolumeOff } from '@mui/icons-material';
 
 const MusicPlayer = ({ src, title = 'Custom Track' }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(50);
+  const [isMuted, setIsMuted] = useState(false); // New state for mute functionality
   const audioRef = useRef(new Audio(src));
 
   useEffect(() => {
@@ -37,8 +38,20 @@ const MusicPlayer = ({ src, title = 'Custom Track' }) => {
 
   const handleVolumeChange = (_, newValue) => {
     const audio = audioRef.current;
-    audio.volume = newValue / 100;
-    setVolume(newValue);
+    if (!isMuted) {
+      audio.volume = newValue / 100;
+      setVolume(newValue);
+    }
+  };
+
+  const toggleMute = () => {
+    const audio = audioRef.current;
+    if (isMuted) {
+      audio.volume = volume / 100; // Restore the previous volume level
+    } else {
+      audio.volume = 0; // Mute the audio
+    }
+    setIsMuted(!isMuted); // Toggle mute state
   };
 
   return (
@@ -72,7 +85,6 @@ const MusicPlayer = ({ src, title = 'Custom Track' }) => {
       </IconButton>
       <Slider
         value={progress}
-        px
         onChange={handleProgressChange}
         aria-label="Progress"
         sx={{ width: '80%', color: 'var(--primary-color)' }}
@@ -85,7 +97,13 @@ const MusicPlayer = ({ src, title = 'Custom Track' }) => {
           paddingBottom: '10px',
         }}
       >
-        <VolumeUp sx={{ mr: 1 }} />
+        <IconButton onClick={toggleMute} sx={{ color: 'var(--primary-color)' }}>
+          {isMuted ? (
+            <VolumeOff sx={{ fontSize: '2rem' }} />
+          ) : (
+            <VolumeUp sx={{ fontSize: '2rem' }} />
+          )}
+        </IconButton>
         <Slider
           value={volume}
           onChange={handleVolumeChange}

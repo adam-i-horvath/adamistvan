@@ -28,8 +28,8 @@ const Rolam = () => {
           <h3>Zenei producer és DJ.</h3>
 
           <p>
-            Elektronikus zenét készítek deep house, techno és ambient
-            műfajokban.
+            Elektronikus zenét készítek deep house, melodic techno és future
+            house műfajokban.
           </p>
           <MusicPlayer src={DemoMusic} title="Adam Horvath - The Night" />
         </div>
