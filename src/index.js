@@ -22,7 +22,7 @@ const RootComponent = () => {
           {loading && <LoadingBackdrop onComplete={() => setLoading(false)} />}
           {!loading && (
             <I18nextProvider i18n={i18n}>
-              <App />
+              <App />k
               <CookieBanner />
             </I18nextProvider>
           )}
