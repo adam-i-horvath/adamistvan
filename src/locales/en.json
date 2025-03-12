@@ -1,4 +1,7 @@
 {
+  "n_whoami": "Who am I?",
+  "n_projects": "Projects",
+  "n_contact": "Contact",
   "welcome": "Hello! My name is Adam.",
   "quote": "„Those who can imagine anything, can create the impossible. -Alan Turing''",
   "home_line_01": "I am István Ádám Horváth, CAD-CAM technologist and IT developer, dedicated to data analysis, software development and digital solutions",
@@ -11,5 +14,20 @@
   "cookiePolicy": "Cookie Policy",
   "privacyPolicy": "Privacy Policy",
   "accept": "Accept",
-  "decline": "Decline"
+  "decline": "Decline",
+  "r_t": "Who am I?",
+  "r_t_develop": "Developer and database expert.",
+  "r_t_music": "Music producer and DJ.",
+  "r_t_creative": "Creative projects and design.",
+  "r_t_data": "Data processing and artificial intelligence.",
+  "r_t_it": "IT and technology development.",
+  "r_t_innovation": "Problem solving and innovation.",
+  "r_c_develop": "I develop websites, databases and AI integrations using modern technologies such as React, Material UI and Node.js.",
+  "r_c_music": "I create electronic music in deep house, melodic techno and future house genres.",
+  "r_c_creative": "My passion is geometric CAD-based design and AI-based visual projects.",
+  "r_c_data": "My strengths are problem solving and AI-based data analysis to optimize manufacturing defects and processes.",
+  "r_c_it": "I have experience in software development, networking and building automated systems.",
+  "r_c_innovation": "I'm always looking for new solutions and I like to create efficient systems to increase efficiency.",
+  "k_t": "Contact",
+  "k_t_subtitle": "Send me a message using the form or send me an email!"
 }

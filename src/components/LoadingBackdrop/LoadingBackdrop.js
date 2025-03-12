@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Backdrop, CircularProgress } from '@mui/material';
+import Logo from '../Logo/Logo';
 
 const LoadingBackdrop = ({ onComplete }) => {
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,7 @@ const LoadingBackdrop = ({ onComplete }) => {
       }}
     >
       <CircularProgress color="inherit" />
+      <Logo />
     </Backdrop>
   );
 };

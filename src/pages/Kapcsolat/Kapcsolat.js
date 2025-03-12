@@ -9,6 +9,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import t from '../../utils/t';
 
 function Kapcsolat() {
   const { theme } = useContext(ThemeContext);
@@ -98,8 +99,8 @@ function Kapcsolat() {
   return (
     <div className={`kapcsolat ${theme}`}>
       <div className="left-column">
-        <h1>Kapcsolat</h1>
-        <h2>Írj nekem üzenetet az űrlapon keresztül, vagy küldj email-t!</h2>
+        <h1>{t('k_t')}</h1>
+        <h2>{t('k_t_subtitle')}</h2>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group-row">
             <div className="form-group">

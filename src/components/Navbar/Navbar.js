@@ -60,7 +60,7 @@ function Navbar() {
             <AccountCircleIcon />
           </div>
           <span className={activeLabel === 'Rólam' ? 'show' : 'hide'}>
-            Ki vagyok?
+            {t('n_whoami')}
           </span>
         </NavLink>
         <NavLink
@@ -73,7 +73,7 @@ function Navbar() {
             <WorkIcon />
           </div>
           <span className={activeLabel === 'Projektek' ? 'show' : 'hide'}>
-            Projektek
+            {t('n_projects')}
           </span>
         </NavLink>
         <NavLink
@@ -86,7 +86,7 @@ function Navbar() {
             <AlternateEmailIcon />
           </div>
           <span className={activeLabel === 'Kapcsolat' ? 'show' : 'hide'}>
-            Kapcsolat
+            {t('n_contact')}
           </span>
         </NavLink>
       </nav>

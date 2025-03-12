@@ -6,17 +6,30 @@ const MusicPlayer = ({ src, title = 'Custom Track' }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(50);
-  const [isMuted, setIsMuted] = useState(false); // New state for mute functionality
+  const [isMuted, setIsMuted] = useState(false);
+  const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+
   const audioRef = useRef(new Audio(src));
 
   useEffect(() => {
     const audio = audioRef.current;
-    const updateProgress = () =>
+
+    const updateProgress = () => {
       setProgress((audio.currentTime / audio.duration) * 100);
+      setCurrentTime(audio.currentTime);
+    };
+
+    const onLoadedMetadata = () => {
+      setDuration(audio.duration);
+    };
 
     audio.addEventListener('timeupdate', updateProgress);
+    audio.addEventListener('loadedmetadata', onLoadedMetadata);
+
     return () => {
       audio.removeEventListener('timeupdate', updateProgress);
+      audio.removeEventListener('loadedmetadata', onLoadedMetadata);
     };
   }, []);
 
@@ -47,11 +60,18 @@ const MusicPlayer = ({ src, title = 'Custom Track' }) => {
   const toggleMute = () => {
     const audio = audioRef.current;
     if (isMuted) {
-      audio.volume = volume / 100; // Restore the previous volume level
+      audio.volume = volume / 100; // Restore previous volume
     } else {
-      audio.volume = 0; // Mute the audio
+      audio.volume = 0; // Mute audio
     }
-    setIsMuted(!isMuted); // Toggle mute state
+    setIsMuted(!isMuted);
+  };
+
+  // Format time to MM:SS
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
   return (
@@ -83,12 +103,34 @@ const MusicPlayer = ({ src, title = 'Custom Track' }) => {
           <PlayArrow sx={{ fontSize: '3rem' }} />
         )}
       </IconButton>
-      <Slider
-        value={progress}
-        onChange={handleProgressChange}
-        aria-label="Progress"
-        sx={{ width: '80%', color: 'var(--primary-color)' }}
-      />
+      <Box sx={{ width: '80%', display: 'flex', alignItems: 'center' }}>
+        <Typography
+          variant="body2"
+          sx={{
+            width: '10%',
+            textAlign: 'center',
+            paddingRight: '18px', // Added some space on the right side of the current time
+          }}
+        >
+          {formatTime(currentTime)}
+        </Typography>
+        <Slider
+          value={progress}
+          onChange={handleProgressChange}
+          aria-label="Progress"
+          sx={{ width: '80%', color: 'var(--primary-color)' }}
+        />
+        <Typography
+          variant="body2"
+          sx={{
+            width: '10%',
+            textAlign: 'center',
+            paddingLeft: '10px', // Added some space on the left side of the duration
+          }}
+        >
+          {formatTime(duration)}
+        </Typography>
+      </Box>
       <Box
         sx={{
           display: 'flex',
