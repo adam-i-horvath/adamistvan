@@ -6,6 +6,8 @@ import BrushIcon from '@mui/icons-material/Brush';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import ComputerIcon from '@mui/icons-material/Computer';
 import BuildIcon from '@mui/icons-material/Build';
+import MusicPlayer from '../../components/MusicPlayer/MusicPlayer';
+import DemoMusic from '../../assets/music/AdamHorvath-Night.mp3';
 
 const Rolam = () => {
   return (
@@ -24,21 +26,12 @@ const Rolam = () => {
         <div className="card">
           <MusicNoteIcon className="icon" />
           <h3>Zenei producer és DJ.</h3>
+
           <p>
             Elektronikus zenét készítek deep house, techno és ambient
             műfajokban.
           </p>
-          <iframe
-            style={{ borderRadius: '5px' }}
-            width="100%"
-            height="120px"
-            src="https://www.youtube.com/embed/-2dsRcPooqs?si=2uqH11ZAhbnkr5PW"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+          <MusicPlayer src={DemoMusic} title="Adam Horvath - The Night" />
         </div>
 
         <div className="card">
