@@ -1,58 +1,50 @@
-import React, { useEffect, useState } from 'react';
-import './Projektek.css';
-import Kartya from './Kartya';
-import KartyaDev from './Kartya_dev';
-import kartya_data from './projektek_data.json'; // Importing JSON data
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import React, { useState, useEffect } from 'react';
+import { Box } from '@mui/material';
+import WebsiteCard from '../../components/WebsiteDialog/WebsiteCard';
+import WebsiteDialog from '../../components/WebsiteDialog/WebsiteDialog';
+import websitesData from '../../components/WebsiteDialog/websites.json';
+import './Projektek.css'; // Import the CSS file
+import t from '../../utils/t';
 
-function Projektek() {
-  const [repos, setRepos] = useState([]);
+const Projektek = () => {
+  const [websites, setWebsites] = useState([]);
+  const [openDialog, setOpenDialog] = useState(false);
+  const [selectedWebsite, setSelectedWebsite] = useState(null);
 
   useEffect(() => {
-    fetch('https://api.github.com/users/adam-i-horvath/repos')
-      .then((response) => response.json())
-      .then((data) =>
-        setRepos(
-          data
-            .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)) // Sorting by latest updated
-            .map((repo) => ({
-              name: repo.name,
-              description: repo.description || 'Nem elérhető leírás.',
-              html_url: repo.html_url,
-              language: repo.language || 'Ismeretlen',
-              stargazers_count: repo.stargazers_count || 0,
-              forks_count: repo.forks_count || 0,
-              updated_at: new Date(repo.updated_at).toLocaleDateString('hu-HU'), // Format date
-            }))
-        )
-      )
-      .catch((error) => console.error('Hiba a repók lekérésekor:', error));
+    setWebsites(websitesData); // Load website data from the JSON
   }, []);
 
+  const handleDialogOpen = (website) => {
+    setSelectedWebsite(website);
+    setOpenDialog(true);
+  };
+
+  const handleDialogClose = () => {
+    setOpenDialog(false);
+  };
+
   return (
-    <div className="projektek">
-      <h1>Projektek</h1>
-      <h3 style={{ display: 'flex', alignItems: 'center' }}>
-        <span>Élő weboldalak</span>
-        <div className="icon_live">
-          <FiberManualRecordIcon />
-        </div>
-      </h3>
-      <div className="project__dev">
-        {kartya_data.project_developed.map((project, index) => (
-          <KartyaDev key={index} project={project} />
+    <div className="projects">
+      <h1>{t('p_t')}</h1>
+      <Box className="projektek-container">
+        {websites.map((website) => (
+          <WebsiteCard
+            key={website.name}
+            website={website}
+            onClick={() => handleDialogOpen(website)}
+          />
         ))}
-      </div>
-      <h3>
-        <span>GitHub (kódok)</span>
-      </h3>
-      <div className="project-grid">
-        {repos.map((repo, index) => (
-          <Kartya key={index} project={repo} />
-        ))}
-      </div>
+      </Box>
+      {selectedWebsite && (
+        <WebsiteDialog
+          open={openDialog}
+          onClose={handleDialogClose}
+          website={selectedWebsite}
+        />
+      )}
     </div>
   );
-}
+};
 
 export default Projektek;
