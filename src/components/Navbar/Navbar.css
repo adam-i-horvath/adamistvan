@@ -41,6 +41,12 @@
     border-radius: 50px;
     transition: background-color 0.5s ease;
   }
+
+  .nav-link,
+  .nav-link-avatar {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
   
   .nav-link .icon-container {
     display: flex;
