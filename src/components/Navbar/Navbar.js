@@ -5,7 +5,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import './Navbar.css';
-import ImageAdam from '../../assets/img/adam.jpg';
+import ImageAdam from '../../assets/img/adam.webp';
 import t from '../../utils/t';
 
 function Navbar() {
@@ -13,22 +13,28 @@ function Navbar() {
   const [activeLabel, setActiveLabel] = useState('');
 
   useEffect(() => {
+    let pageTitle = `${t('firstname')}`;
     switch (location.pathname) {
       case '/':
         setActiveLabel('Home');
         break;
       case '/about':
-        setActiveLabel('Rólam');
+        setActiveLabel('AboutMe');
+        pageTitle += ` - ${t('n_whoami')}`;
         break;
       case '/projects':
         setActiveLabel('Projects');
+        pageTitle += ` - ${t('n_projects')}`;
         break;
       case '/contact':
         setActiveLabel('Contact');
+        pageTitle += ` - ${t('n_contact')}`;
         break;
       default:
         setActiveLabel('');
+        break;
     }
+    document.title = pageTitle;
   }, [location.pathname]);
 
   return (
@@ -54,12 +60,12 @@ function Navbar() {
           to="/about"
           className="nav-link"
           activeclassname="active"
-          onClick={() => setActiveLabel('Rólam')}
+          onClick={() => setActiveLabel('AboutMe')}
         >
           <div className="icon-container">
             <AccountCircleIcon />
           </div>
-          <span className={activeLabel === 'Rólam' ? 'show' : 'hide'}>
+          <span className={activeLabel === 'AboutMe' ? 'show' : 'hide'}>
             {t('n_whoami')}
           </span>
         </NavLink>

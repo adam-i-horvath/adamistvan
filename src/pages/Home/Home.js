@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import profileImage from '../../assets/img/adam_AboutMe_oldal.jpg'; // Replace with your actual image path
+import profileImage from '../../assets/img/adam_AboutMe_oldal.webp'; // Replace with your actual image path
 import t from '../../utils/t';
 
 function Home() {

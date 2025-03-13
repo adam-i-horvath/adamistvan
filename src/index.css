@@ -16,7 +16,10 @@
   --lime-zest: #13cf13;
   --violet-velvet: #7744d0;
   --fixed-white: #ffffff;
+  --fixed-icon-color: #18191a;
   --invert-color: invert(90%);
+  --fill-bw: brightness(0) invert(0);
+  --project-card-bg:#e9ebef;
 
 }
 
@@ -34,6 +37,7 @@
   --lime-zest: #13cf13;
   --violet-velvet: #7744d0;
   --invert-color: 'none';
+  --fill-bw: brightness(0) invert(1);
 }
 
 body {
@@ -54,10 +58,10 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  padding: 10px 0 10px 0 ;
   color: var(--secondary-color);
   display: inline-block;
   line-height: 1.2; /* Adjust for better alignment */
+  margin: 0px 0px 25px 0px;
 }
 
 h3 span {

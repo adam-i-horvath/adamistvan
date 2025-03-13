@@ -5,6 +5,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import BrushIcon from '@mui/icons-material/Brush';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import ComputerIcon from '@mui/icons-material/Computer';
+import { Box, Typography } from '@mui/material';
 import BuildIcon from '@mui/icons-material/Build';
 import MusicPlayer from '../../components/MusicPlayer/MusicPlayer';
 import DemoMusic from '../../assets/music/AdamHorvath-Night.mp3';
@@ -14,6 +15,16 @@ const AboutMe = () => {
   return (
     <div className="AboutMe">
       <h1>{t('r_t')}</h1>
+      <Box
+        sx={{
+          display: 'flex',
+          gap: '15px',
+          flexDirection: 'column',
+        }}
+      >
+        <Typography>{t('r_aboutme_first')}</Typography>
+        <Typography>{t('r_aboutme_second')}</Typography>
+      </Box>
       <div className="grid">
         <div className="card">
           <CodeIcon className="icon" />

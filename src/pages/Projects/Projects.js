@@ -1,49 +1,47 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Box } from '@mui/material';
-import WebsiteCard from '../../components/WebsiteDialog/WebsiteCard';
-import WebsiteDialog from '../../components/WebsiteDialog/WebsiteDialog';
-import websitesData from '../../components/WebsiteDialog/websites.json';
-import './Projects.css'; // Import the CSS file
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import projects from '../../assets/json/projects.json';
 import t from '../../utils/t';
+import GithubRepoCard from '../../components/GithubRepoCard/GithubRepoCard';
 
 const Projects = () => {
-  const [websites, setWebsites] = useState([]);
-  const [openDialog, setOpenDialog] = useState(false);
-  const [selectedWebsite, setSelectedWebsite] = useState(null);
-
-  useEffect(() => {
-    setWebsites(websitesData); // Load website data from the JSON
-  }, []);
-
-  const handleDialogOpen = (website) => {
-    setSelectedWebsite(website);
-    setOpenDialog(true);
-  };
-
-  const handleDialogClose = () => {
-    setOpenDialog(false);
-  };
-
   return (
-    <div className="projects">
-      <h1>{t('p_t')}</h1>
-      <Box className="Projects-container">
-        {websites.map((website) => (
-          <WebsiteCard
-            key={website.name}
-            website={website}
-            onClick={() => handleDialogOpen(website)}
-          />
+    <Box sx={{ padding: '20px' }}>
+      <Box>
+        <h1>{t('p_t')}</h1>
+      </Box>
+      <h2>{t('p_f_w')}</h2>
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: 3, // Adds spacing between cards
+          justifyContent: 'center',
+          padding: '20px',
+        }}
+      >
+        {projects.map((project) => (
+          <Box
+            key={project.id}
+            sx={{
+              width: {
+                xs: '100%',
+                sm: 'calc(50% - 12px)',
+                md: 'calc(33.33% - 16px)',
+              }, // Responsive widths
+            }}
+          >
+            <ProjectCard project={project} />
+          </Box>
         ))}
       </Box>
-      {selectedWebsite && (
-        <WebsiteDialog
-          open={openDialog}
-          onClose={handleDialogClose}
-          website={selectedWebsite}
-        />
-      )}
-    </div>
+      <Box>
+        <h1>{t('p_gh_t')}</h1>
+      </Box>
+      <h2>{t('p_gh_t_s')}</h2>
+      <GithubRepoCard />
+    </Box>
   );
 };
 

@@ -31,6 +31,7 @@
 }
 
 .social-media__line a {
+  color: var(--fixed-white);
   display: flex;
   align-items: center;
   gap: 10px;

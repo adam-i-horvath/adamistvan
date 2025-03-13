@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "noiszemmel.eu",
+    "image": "/assets/img/OtthonunkNoiSzemmel_Color_Logo.webp",
+    "webimage": "/assets/img/noiszemmel_mockup.webp",
+    "descriptionKey": "p_noiszemmel_d",
+    "url": "https://noiszemmel.eu"
+  },
+  {
+    "id": 2,
+    "title": "pje.hu",
+    "image": "/assets/img/pje-logo.webp",
+    "webimage": "/assets/img/pje_mockup.webp",
+    "descriptionKey": "p_pje_d",
+    "url": "https://pje.hu"
+  },
+  {
+    "id": 3,
+    "title": "adamistvan.hu",
+    "image": "/assets/img/adamistvan-logo.webp",
+    "webimage": "/assets/img/sample.jpg",
+    "descriptionKey": "p_adamistvan_d",
+    "url": "https://adamistvan.hu"
+  }
+]
