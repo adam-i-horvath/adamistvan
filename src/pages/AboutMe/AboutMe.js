@@ -1,5 +1,5 @@
 import React from 'react';
-import './Rolam.css';
+import './AboutMe.css';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import CodeIcon from '@mui/icons-material/Code';
 import BrushIcon from '@mui/icons-material/Brush';
@@ -10,9 +10,9 @@ import MusicPlayer from '../../components/MusicPlayer/MusicPlayer';
 import DemoMusic from '../../assets/music/AdamHorvath-Night.mp3';
 import t from '../../utils/t';
 
-const Rolam = () => {
+const AboutMe = () => {
   return (
-    <div className="rolam">
+    <div className="AboutMe">
       <h1>{t('r_t')}</h1>
       <div className="grid">
         <div className="card">
@@ -57,4 +57,4 @@ const Rolam = () => {
   );
 };
 
-export default Rolam;
+export default AboutMe;

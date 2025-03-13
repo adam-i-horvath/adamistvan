@@ -1,9 +1,9 @@
 .footer {
-    background-color: var(--navbar-background-color);
-    color: var(--navbar-text-color);
+    background-color: var(--frosted-pearl);
+    color: var(--navy-void);
     padding: 20px;
     text-align: center;
-    border-top: 1px solid var(--navbar-hover-background-color);
+    border-top: 1px solid var(--hovering-cloud);
     height: 200px;
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@
 }
 
 a {
-  color: var(--navbar-text-color);
+  color: var(--navy-void);
   text-decoration: none;
 }
 

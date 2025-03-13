@@ -18,17 +18,18 @@
   "r_t": "Ki vagyok?",
   "r_t_develop": "Fejlesztő és adatbázis-szakértő.",
   "r_t_music": "Zenei producer és DJ.",
-  "r_t_creative": "Kreatív projektek és dizájn.",
+  "r_t_creative": "Kreatív Projects és dizájn.",
   "r_t_data": "Adatfeldolgozás és mesterséges intelligencia.",
   "r_t_it": "IT és technológiai Fejlesztések.",
   "r_t_innovation": "Problémamegoldás és innováció.",
   "r_c_develop": "Weboldalakat, adatbázisokat és AI-integrációkat fejlesztek modern technológiákkal, mint a React, Material UI és Node.js.",
   "r_c_music": "Elektronikus zenét készítek deep house, melodic techno és future house műfajokban.",
-  "r_c_creative": "Szenvedélyem a geometriai CAD-alapú dizájn és az AI-alapú vizuális projektek.",
+  "r_c_creative": "Szenvedélyem a geometriai CAD-alapú dizájn és az AI-alapú vizuális Projects.",
   "r_c_data": "Erősségem a problémamegoldás és az AI-alapú adatelemzés a gyártási hibák és folyamatok optimalizálására.",
   "r_c_it": "Tapasztalatom van szoftverfejlesztésben, hálózatokban és automatizált rendszerek építésében.",
   "r_c_innovation": "Mindig keresem az új megoldásokat, és szívesen hozok létre hatékony rendszereket a hatékonyság növelése érdekében.",
   "k_t": "Kapcsolat",
   "k_t_subtitle": "Írj nekem üzenetet az űrlapon keresztül, vagy küldj email-t!",
-  "p_t": "Projektek"
+  "p_t": "Projektek",
+  "underdev": "A weboldal fejlesztés alatt..."
 }

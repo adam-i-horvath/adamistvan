@@ -1,9 +1,9 @@
 .logo {
-  font-family: 'Noe Display', Georgia, Times, serif;
+    font-family: var(--font-family-secondary);
     font-size: 3rem;
     font-style: italic;
     line-height: 0.5;
-    color: var(--navbar-active-background-color);
+    color: var(--active-stone);
     padding: 20px;
     display: flex;
     align-items: center;

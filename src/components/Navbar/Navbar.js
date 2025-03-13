@@ -15,16 +15,16 @@ function Navbar() {
   useEffect(() => {
     switch (location.pathname) {
       case '/':
-        setActiveLabel('Kezdőlap');
+        setActiveLabel('Home');
         break;
-      case '/rolam':
+      case '/about':
         setActiveLabel('Rólam');
         break;
-      case '/projektek':
-        setActiveLabel('Projektek');
+      case '/projects':
+        setActiveLabel('Projects');
         break;
-      case '/kapcsolat':
-        setActiveLabel('Kapcsolat');
+      case '/contact':
+        setActiveLabel('Contact');
         break;
       default:
         setActiveLabel('');
@@ -37,7 +37,7 @@ function Navbar() {
         to="/"
         className="nav-link-avatar"
         activeclassname="active"
-        onClick={() => setActiveLabel('Kezdőlap')}
+        onClick={() => setActiveLabel('Home')}
       >
         <div className="icon-container">
           <div className="img">
@@ -45,13 +45,13 @@ function Navbar() {
             <VerifiedIcon className="verified-icon" />
           </div>
         </div>
-        <span className={activeLabel === 'Kezdőlap' ? 'show' : 'hide'}>
+        <span className={activeLabel === 'Home' ? 'show' : 'hide'}>
           {t('profileMessage')}
         </span>
       </NavLink>
       <nav className="navbar">
         <NavLink
-          to="/rolam"
+          to="/about"
           className="nav-link"
           activeclassname="active"
           onClick={() => setActiveLabel('Rólam')}
@@ -64,28 +64,28 @@ function Navbar() {
           </span>
         </NavLink>
         <NavLink
-          to="/projektek"
+          to="/projects"
           className="nav-link"
           activeclassname="active"
-          onClick={() => setActiveLabel('Projektek')}
+          onClick={() => setActiveLabel('Projects')}
         >
           <div className="icon-container">
             <WorkIcon />
           </div>
-          <span className={activeLabel === 'Projektek' ? 'show' : 'hide'}>
+          <span className={activeLabel === 'Projects' ? 'show' : 'hide'}>
             {t('n_projects')}
           </span>
         </NavLink>
         <NavLink
-          to="/kapcsolat"
+          to="/contact"
           className="nav-link"
           activeclassname="active"
-          onClick={() => setActiveLabel('Kapcsolat')}
+          onClick={() => setActiveLabel('Contact')}
         >
           <div className="icon-container">
             <AlternateEmailIcon />
           </div>
-          <span className={activeLabel === 'Kapcsolat' ? 'show' : 'hide'}>
+          <span className={activeLabel === 'Contact' ? 'show' : 'hide'}>
             {t('n_contact')}
           </span>
         </NavLink>

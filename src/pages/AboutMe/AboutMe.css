@@ -1,8 +1,8 @@
-.rolam {
+.AboutMe {
     padding: 20px;
   }
 
-  .rolam img {
+  .AboutMe img {
     width: 400px;
   }
   
@@ -16,7 +16,7 @@
   .card {
     padding: 20px;
     border-radius: 8px;
-    border: 1px solid var(--navbar-hover-background-color);
+    border: 1px solid var(--hovering-cloud);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
     min-height: 250px;
   }
   
-  .rolam .icon {
+  .AboutMe .icon {
     font-size: 3rem;
     color: var(--primary-color);
   }

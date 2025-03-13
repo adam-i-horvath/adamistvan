@@ -3,10 +3,10 @@ import { Box } from '@mui/material';
 import WebsiteCard from '../../components/WebsiteDialog/WebsiteCard';
 import WebsiteDialog from '../../components/WebsiteDialog/WebsiteDialog';
 import websitesData from '../../components/WebsiteDialog/websites.json';
-import './Projektek.css'; // Import the CSS file
+import './Projects.css'; // Import the CSS file
 import t from '../../utils/t';
 
-const Projektek = () => {
+const Projects = () => {
   const [websites, setWebsites] = useState([]);
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedWebsite, setSelectedWebsite] = useState(null);
@@ -27,7 +27,7 @@ const Projektek = () => {
   return (
     <div className="projects">
       <h1>{t('p_t')}</h1>
-      <Box className="projektek-container">
+      <Box className="Projects-container">
         {websites.map((website) => (
           <WebsiteCard
             key={website.name}
@@ -47,4 +47,4 @@ const Projektek = () => {
   );
 };
 
-export default Projektek;
+export default Projects;

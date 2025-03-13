@@ -19,10 +19,10 @@ const WebsiteCard = ({ website, onClick }) => {
       <Card
         sx={{
           width: '100%',
-          backgroundColor: 'var(--navbar-background-color)',
+          backgroundColor: 'var(--frosted-pearl)',
           borderRadius: '15px',
           display: 'flex',
-          border: '1px solid var(--navbar-active-background-color)',
+          border: '1px solid var(--active-stone)',
           boxShadow: 'none',
         }}
       >
@@ -34,7 +34,7 @@ const WebsiteCard = ({ website, onClick }) => {
           sx={{
             cursor: 'pointer',
             objectFit: 'scale-down',
-            filter: 'var(--filter-invert)',
+            filter: 'var(--invert-color)',
           }}
           onClick={onClick}
         />

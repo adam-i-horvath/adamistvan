@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import './Projektek.css';
+import './Projects.css';
 import Kartya from './Kartya';
 import KartyaDev from './Kartya_dev';
-import kartya_data from './projektek_data.json'; // Importing JSON data
+import kartya_data from './Projects_data.json'; // Importing JSON data
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
-function Projektek() {
+function Projects() {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
@@ -30,8 +30,8 @@ function Projektek() {
   }, []);
 
   return (
-    <div className="projektek">
-      <h1>Projektek</h1>
+    <div className="Projects">
+      <h1>Projects</h1>
       <h3 style={{ display: 'flex', alignItems: 'center' }}>
         <span>Élő weboldalak</span>
         <div className="icon_live">
@@ -55,4 +55,4 @@ function Projektek() {
   );
 }
 
-export default Projektek;
+export default Projects;

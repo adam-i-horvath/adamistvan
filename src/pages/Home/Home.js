@@ -1,9 +1,9 @@
 import React from 'react';
-import './Kezdolap.css';
-import profileImage from '../../assets/img/adam_rolam_oldal.jpg'; // Replace with your actual image path
+import './Home.css';
+import profileImage from '../../assets/img/adam_AboutMe_oldal.jpg'; // Replace with your actual image path
 import t from '../../utils/t';
 
-function Kezdolap() {
+function Home() {
   return (
     <div className="home">
       <h1>{t('welcome')}</h1>
@@ -22,4 +22,4 @@ function Kezdolap() {
   );
 }
 
-export default Kezdolap;
+export default Home;

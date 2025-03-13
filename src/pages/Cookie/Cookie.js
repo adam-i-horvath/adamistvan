@@ -61,7 +61,7 @@ const Cookie = () => {
         </Typography>
         <Typography variant="body1" paragraph>
           Amennyiben a későbbiekben mégis valamilyen űrlap kitöltésével –
-          kifejezett hozzájárulásával – kapcsolatba lép velünk egy olyan
+          kifejezett hozzájárulásával – Contactba lép velünk egy olyan
           weboldalunkon, ahol cookie-kat használunk, előfordulhat, hogy ezen
           cookie-k segítségével megismerjük az űrlap kitöltését követően tett
           weboldallátogatásainak adatait. Ez a felhasználói élmény növelése
@@ -78,8 +78,8 @@ const Cookie = () => {
           tartalmát – például Facebook, Youtube, Instagram –, akkor Ön további
           cookie-kat is kaphat ezektől a weboldalaktól. Ezeknek a cookie-knak
           nem a www.nadudvarert.hu oldal a kezelője, ezért azt javasoljuk, hogy
-          a velük és kezelésükkel kapcsolatos további információkért látogasson
-          el a harmadik fél honlapjára.
+          a velük és kezelésükkel Contactos további információkért látogasson el
+          a harmadik fél honlapjára.
         </Typography>
         <Typography variant="h5" gutterBottom>
           <h2>2. Az oldalon használt cookie-k kategóriái</h2>

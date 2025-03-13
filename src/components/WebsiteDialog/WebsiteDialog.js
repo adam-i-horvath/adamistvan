@@ -14,7 +14,7 @@ const WebsiteDialog = ({ open, onClose, website }) => (
     <DialogTitle
       sx={{
         textTransform: 'uppercase',
-        backgroundColor: 'var(--navbar-background-color)',
+        backgroundColor: 'var(--frosted-pearl)',
         color: 'var(--text-color)',
       }}
     >
@@ -22,7 +22,7 @@ const WebsiteDialog = ({ open, onClose, website }) => (
     </DialogTitle>
     <DialogContent
       sx={{
-        backgroundColor: 'var(--navbar-background-color)',
+        backgroundColor: 'var(--frosted-pearl)',
         color: 'var(--text-color)',
       }}
     >
@@ -35,7 +35,7 @@ const WebsiteDialog = ({ open, onClose, website }) => (
     </DialogContent>
     <DialogActions
       sx={{
-        backgroundColor: 'var(--navbar-background-color)',
+        backgroundColor: 'var(--frosted-pearl)',
       }}
     >
       <Button onClick={onClose} color="primary">

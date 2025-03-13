@@ -1,4 +1,4 @@
-.projektek {
+.Projects {
   padding: 20px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .icon_live {
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
   margin: 0 10px;
   height: 25px;
   width: 25px;

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useContext } from 'react';
 import { ThemeContext } from '../../components/ThemeContext/ThemeContext';
-import './Kapcsolat.css';
+import './Contact.css';
 import { Alert, Snackbar, Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -11,7 +11,7 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import t from '../../utils/t';
 
-function Kapcsolat() {
+function Contact() {
   const { theme } = useContext(ThemeContext);
   const recaptchaRef = useRef(null);
 
@@ -97,7 +97,7 @@ function Kapcsolat() {
   };
 
   return (
-    <div className={`kapcsolat ${theme}`}>
+    <div className={`Contact ${theme}`}>
       <div className="left-column">
         <h1>{t('k_t')}</h1>
         <h2>{t('k_t_subtitle')}</h2>
@@ -144,7 +144,7 @@ function Kapcsolat() {
               <input type="checkbox" id="agree" required />
               Elfogadom az{' '}
               <a
-                href="/adatkezelesi-tajekoztato-kapcsolatfelveteli-urlaphoz.pdf"
+                href="/adatkezelesi-tajekoztato-Contactfelveteli-urlaphoz.pdf"
                 style={{ marginLeft: '5px' }}
               >
                 adatkezelési tájékoztatót
@@ -185,27 +185,27 @@ function Kapcsolat() {
       <div className="right-column">
         <div className="social-media">
           <div className="social-media__line">
-            <a href="/kapcsolat">
+            <a href="/Contact">
               <FacebookIcon /> Facebook
             </a>
           </div>
           <div className="social-media__line">
-            <a href="/kapcsolat">
+            <a href="/Contact">
               <InstagramIcon /> Instagram
             </a>
           </div>
           <div className="social-media__line">
-            <a href="/kapcsolat">
+            <a href="/Contact">
               <LinkedInIcon /> LinkedIn
             </a>
           </div>
           <div className="social-media__line">
-            <a href="/kapcsolat">
+            <a href="/Contact">
               <GitHubIcon /> GitHub
             </a>
           </div>
           <div className="social-media__line">
-            <a href="/kapcsolat">
+            <a href="/Contact">
               <ContactMailIcon /> hello@adamistvan.hu
             </a>
           </div>
@@ -224,4 +224,4 @@ function Kapcsolat() {
   );
 }
 
-export default Kapcsolat;
+export default Contact;

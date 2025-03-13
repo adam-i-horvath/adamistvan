@@ -52,20 +52,20 @@ const LanguageSwitcher = () => {
         bottom: 16,
         right: 16,
         '& .MuiButtonBase-root': {
-          backgroundColor: 'var(--navbar-background-color)', // Set the button background color to red
+          backgroundColor: 'var(--frosted-pearl)', // Set the button background color to red
           color: 'var(--text-color)', // Set icon color to white
           boxShadow: 'none',
           outline: '1px black',
           border: '1px solid var(--text-color)',
         },
         '& .MuiButtonBase-root:hover': {
-          backgroundColor: 'var(--navbar-hover-background-color)', // Set the hover button color
+          backgroundColor: 'var(--hovering-cloud)', // Set the hover button color
           color: 'var(--text-color)',
           boxShadow: 'none',
           border: '1px solid var(--text-color)',
         },
         '& .MuiButtonBase-root:pressed': {
-          backgroundColor: 'var(--navbar-hover-background-color)', // Set the hover button color
+          backgroundColor: 'var(--hovering-cloud)', // Set the hover button color
         },
       }}
     >

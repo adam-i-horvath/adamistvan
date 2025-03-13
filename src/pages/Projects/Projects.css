@@ -1,7 +1,7 @@
 .projects {
     padding: 20px;    
 }
-.projektek-container {
+.Projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 16px; /* Adjusted spacing between items */
@@ -10,13 +10,13 @@
   }
   
   @media (min-width: 900px) {
-    .projektek-container {
+    .Projects-container {
       grid-template-columns: repeat(2, 1fr); /* 2 columns for desktop */
     }
   }
   
   @media (max-width: 900px) {
-    .projektek-container {
+    .Projects-container {
       grid-template-columns: 1fr; /* 1 column for mobile */
     }
   }

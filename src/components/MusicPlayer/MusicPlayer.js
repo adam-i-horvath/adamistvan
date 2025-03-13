@@ -80,7 +80,7 @@ const MusicPlayer = ({ src, title = 'Custom Track' }) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        bgcolor: 'var(--navbar-background-color)',
+        bgcolor: 'var(--frosted-pearl)',
         borderRadius: 2,
         width: '100%',
         color: 'var(--text-color)',
