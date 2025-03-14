@@ -45,7 +45,7 @@ const ProjectCard = ({ project }) => {
         <CardActionArea onClick={handleClickOpen}>
           <CardMedia
             component="img"
-            height="200"
+            height="180"
             image={project.image}
             alt={project.title}
             sx={{
